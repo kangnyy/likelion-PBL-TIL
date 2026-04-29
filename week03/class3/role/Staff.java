@@ -1,9 +1,9 @@
 package likelion_PBL_TIL.week03.class3.role;
 
-import likelion_PBL_TIL.week03.class3.policy.AssignmentPolicy;
-import likelion_PBL_TIL.week03.class3.policy.StaffPolicy;
+import likelion_PBL_TIL.week03.class3.policy.SubmissionPolicy;
+import likelion_PBL_TIL.week03.class3.policy.StaffSubmissionPolicy;
 
-public class Staff extends Member {
+public class Staff extends Role {
     private String position;
 
     public Staff(String name, String major, int generation, String part, String position) {
@@ -22,7 +22,7 @@ public class Staff extends Member {
     }
 
     @Override
-    protected AssignmentPolicy getPolicy() {
-        return new StaffPolicy();
+    protected SubmissionPolicy getPolicy() {
+        return new StaffSubmissionPolicy();
     }
 }

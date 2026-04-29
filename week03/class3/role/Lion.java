@@ -1,9 +1,9 @@
 package likelion_PBL_TIL.week03.class3.role;
 
-import likelion_PBL_TIL.week03.class3.policy.AssignmentPolicy;
-import likelion_PBL_TIL.week03.class3.policy.LionPolicy;
+import likelion_PBL_TIL.week03.class3.policy.SubmissionPolicy;
+import likelion_PBL_TIL.week03.class3.policy.LionSubmissionPolicy;
 
-public class Lion extends Member {
+public class Lion extends Role {
     private String studentId;
 
     public Lion(String name, String major, int generation, String part, String studentId) {
@@ -23,7 +23,7 @@ public class Lion extends Member {
     }
 
     @Override
-    protected AssignmentPolicy getPolicy() {
-        return new LionPolicy();
+    protected SubmissionPolicy getPolicy() {
+        return new LionSubmissionPolicy();
     }
 }

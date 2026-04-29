@@ -1,7 +1,7 @@
 package likelion_PBL_TIL.week03.class3;
 
 import likelion_PBL_TIL.week03.class3.role.Lion;
-import likelion_PBL_TIL.week03.class3.role.Member;
+import likelion_PBL_TIL.week03.class3.role.Role;
 import likelion_PBL_TIL.week03.class3.role.Staff;
 import java.util.Scanner;
 
@@ -23,7 +23,7 @@ public class Main {
         String lionId = scanner.nextLine();
         System.out.println();
 
-        Member lion = new Lion(lionName, lionMajor, lionGen, lionPart, lionId);
+        Role lion = new Lion(lionName, lionMajor, lionGen, lionPart, lionId);
 
         System.out.println("====== 👩‍💻 운영진 정보 입력 ======");
         System.out.print("👤 이름: ");
@@ -38,7 +38,7 @@ public class Main {
         String staffPosition = scanner.nextLine();
         System.out.println();
 
-        Member staff = new Staff(staffName, staffMajor, staffGen, staffPart, staffPosition);
+        Role staff = new Staff(staffName, staffMajor, staffGen, staffPart, staffPosition);
 
         System.out.println("====== 📋결과 출력 ======");
         System.out.println();
@@ -49,7 +49,7 @@ public class Main {
 
     }
 
-    private static void printMemberInfo(Member member) {
+    private static void printMemberInfo(Role member) {
         System.out.println("🎭 역할: " + member.getRoleName());
         System.out.println(member.getCommonInfo());
         System.out.println(member.getRoleDetails());

@@ -1,14 +1,14 @@
 package likelion_PBL_TIL.week03.class3.role;
 
-import likelion_PBL_TIL.week03.class3.policy.AssignmentPolicy;
+import likelion_PBL_TIL.week03.class3.policy.SubmissionPolicy;
 
-public abstract class Member {
+public abstract class Role {
     private String name;
     private String major;
     private int generation;
     private String part;
 
-    public Member(String name, String major, int generation, String part) {
+    public Role(String name, String major, int generation, String part) {
         this.name = name;
         this.major = major;
         this.generation = generation;
@@ -21,7 +21,7 @@ public abstract class Member {
 
     public abstract String getRoleName();
     public abstract String getRoleDetails();
-    protected abstract AssignmentPolicy getPolicy();
+    protected abstract SubmissionPolicy getPolicy();
 
     public boolean checkSubmission(){
         return getPolicy().canSubmit();
