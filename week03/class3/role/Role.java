@@ -27,6 +27,11 @@ public abstract class Role {
         return getPolicy().canSubmit();
     }
 
+    public String getName() { return name; }
+    public String getMajor() { return major; }
+    public int getGeneration() { return generation; }
+    public String getPart() { return part; }
+
 
 
 
